@@ -1,0 +1,7 @@
+{
+  "name": "medical-expert-system",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
