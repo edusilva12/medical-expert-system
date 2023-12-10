@@ -5,7 +5,7 @@
     </ion-buttons>
     <ion-title>Sistema Experto Salud</ion-title>
     <ion-buttons slot="end">
-      <ion-button (click)="toggleCard()">
+      <ion-button (click)="reset()">
         <ion-icon slot="icon-only" name="refresh-circle"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -21,28 +21,32 @@
   <div id="container">
     <strong class="capitalize">Bienvenido a su diagnóstico</strong>
     <p>Según las respuestas dadas tendrá su resultado:</p>
-    <ion-card *ngIf="showCard">
+    <ion-card *ngIf="cardQuestions">
       <ion-card-header>
         <ion-card-title>Responde las siguientes preguntas</ion-card-title>
-         <p>[PREGUNTAS]</p>
-        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
-        Here's a small text description for the card content. Nothing more,
-        nothing less.
+        <p>{{questionText}}</p>
       </ion-card-content>
       <ion-grid>
         <ion-row>
           <ion-col>
-            <ion-button expand="block">si</ion-button>
+            <ion-button expand="block" (click)="question(true)">si</ion-button>
           </ion-col>
           <ion-col>
-            <ion-button expand="block">no</ion-button>
+            <ion-button expand="block" (click)="question(false)">no</ion-button>
           </ion-col>
         </ion-row>
       </ion-grid>
     </ion-card>
-    <ion-button (click)="toggleCard()" *ngIf="showButtonStarted"
+    <ion-card *ngIf="cardAnswer">
+      <ion-card-header>
+        <ion-card-title>{{answerText}}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+    <ion-button
+      (click)="setCardQuestions();question(true);setButtonInitial()"
+      *ngIf="buttonInitial"
       >Iniciar</ion-button
     >
   </div>
