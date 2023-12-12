@@ -7,7 +7,7 @@ let cholesterol: Array<string> = [
   '¿Tiene adormecimiento en alguna extremidad?',
   '¿Tiene agitacion,en especial al caminar o al realizar actividades leve?',
   '¿Tiene dolor en el pecho?',
-  'Tiene Colesterol alto',
+  'Tiene Colesterol alto; Recomendación:;🥗Cambios en la dieta, como reducir el consumo de grasas saturadas y trans; 🏃🏽‍♂️Aumentar la actividad física',
 ];
 
 let diabetics: Array<string> = [
@@ -18,7 +18,7 @@ let diabetics: Array<string> = [
   '¿Tiene perdida de peso inexplicable?',
   '¿Se siente fatigado?',
   '¿Tiene irritabilidad?',
-  'Tiene Diabetes',
+  'Tiene Diabetes; Recomendación:; 🚧🍰 Controlar la ingesta de carbohidratos y azúcares; 🛡️ Mantener un peso saludable; 🏃‍♂️Realizar ejercicio regularmente',
 ];
 
 let ebola: Array<string> = [
@@ -28,7 +28,7 @@ let ebola: Array<string> = [
   '¿Presenta erupciones cutaneas?',
   '¿Siente debilidad intensa?',
   '¿Tiene dolor de garganta?',
-  'Tiene Ebola',
+  'Tiene Ebola;Recomendación:;💉 Líquidos administrados por vía intravenosa (IV);🏥 Oxígeno;🩸 Manejo de la presión arterial;🏥 🦠 Tratamiento para otras infecciones;🩸 Transfusiones de sangre',
 ];
 
 let gastritis: Array<string> = [
@@ -38,7 +38,7 @@ let gastritis: Array<string> = [
   '¿Tiene ausencia de hambre que en ocasiones puede producir perdida de peso?',
   '¿Presenta heces de color negro o con sangrado?',
   '¿Tiene náuseas?',
-  'Tiene Gastritis',
+  'Tiene Gastritis; Recomendación:;❌ 🌶️ Evitar alimentos irritantes como alimentos picantes, ácidos y grasos;💊 Medicamentos antiácidos o inhibidores de la bomba de protones según la gravedad',
 ];
 
 let pneumonia: Array<string> = [
@@ -46,7 +46,7 @@ let pneumonia: Array<string> = [
   '¿Tiene dolores articulares?',
   '¿Ha tenido tos constante los ultimos dos dias?',
   '¿Presenta dificultad para respirar?',
-  'Tiene Neumonia',
+  'Tiene Neumonia;Recomendación:;💊 Antibióticos para la neumonía bacteriana;🛏️ 🥛 Descanso y una ingesta adecuada de líquidos; 🏥 En casos graves, hospitalización y terapia de oxígeno',
 ];
 
 let parkinson: Array<string> = [
@@ -56,7 +56,7 @@ let parkinson: Array<string> = [
   '¿Ha presentado rigidez severa en alguna region muscular?',
   '¿Sufre de depresión o ha utilizado farmacos para tratar una enfermedad semejante?',
   '¿Presenta algun trastorno en el sueño?',
-  'Tiene Parkinson',
+  'Tiene Parkinson;Recomendación:;💊 Medicamentos para controlar los síntomas, como levodopa;🧑🏻‍⚕️ Terapia física y ocupacional; 👨‍👩‍👧‍👦 Apoyo psicológico y social para el paciente y sus seres queridos',
 ];
 
 export { cholesterol, diabetics, ebola, pneumonia, parkinson, gastritis };

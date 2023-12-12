@@ -17,8 +17,10 @@
   </ion-header>
 
   <div id="container">
-    <strong class="capitalize">Bienvenido a su diagnóstico</strong>
-    <p>Según las respuestas dadas tendrá su resultado:</p>
+    <strong class="capitalize" *ngIf="buttonInitial"
+      >Bienvenido a su diagnóstico</strong
+    >
+    <p *ngIf="buttonInitial">Según las respuestas dadas tendrá su resultado:</p>
     <ion-card *ngIf="cardQuestions">
       <ion-card-header>
         <ion-card-title>Responde las siguientes preguntas</ion-card-title>
@@ -39,7 +41,9 @@
     </ion-card>
     <ion-card *ngIf="cardAnswer">
       <ion-card-header>
-        <ion-card-title>{{answerText}}</ion-card-title>
+        <div *ngFor="let item of listAnswer;let indice=index">
+          <ion-card-title style="margin-bottom: 20px">{{item}}</ion-card-title>
+        </div>
       </ion-card-header>
     </ion-card>
     <ion-button
@@ -48,4 +52,5 @@
       >Iniciar</ion-button
     >
   </div>
+  <div id="footer"><p>📌 Creado por Eduardo y Raisa</p></div>
 </ion-content>

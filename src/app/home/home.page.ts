@@ -1,5 +1,12 @@
 import { Component } from '@angular/core';
-import { cholesterol, diabetics, ebola, gastritis, parkinson, pneumonia } from './data';
+import {
+  cholesterol,
+  diabetics,
+  ebola,
+  gastritis,
+  parkinson,
+  pneumonia,
+} from './data';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +21,7 @@ export class HomePage {
   answerText: string = '';
   counter: number = 0;
   counterQuestionsList: number = 0;
+  listAnswer: Array<string> = [];
   constructor() {}
 
   reset() {
@@ -43,7 +51,8 @@ export class HomePage {
       this.questionText = questionsList[this.counter];
       if (this.counter + 1 == questionsList.length) {
         this.questionText = questionsList[this.counter - 1];
-        this.answerText = questionsList[this.counter];
+        //this.answerText = questionsList[this.counter];
+        this.listAnswer = questionsList[this.counter].split(';');
         this.setCardQuestions();
         this.setCardAnswer();
       }
