@@ -1,30 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
-import { addIcons } from 'ionicons';
-import { refreshCircle, refreshCircleSharp } from 'ionicons/icons';
-import {
-  cholesterol,
-  diabetics,
-  ebola,
-  gastritis,
-  parkinson,
-  pneumonia,
-} from './data';
+import { Component } from '@angular/core';
+import { cholesterol, diabetics, ebola, gastritis, parkinson, pneumonia } from './data';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.page.html',
-  styleUrls: ['./home.page.scss'],
-  standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule],
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss'],
 })
-export class HomePage implements OnInit {
-  showCard = false;
-  showButtonStarted = true;
-
-  // new code
+export class HomePage {
   cardQuestions: boolean = false;
   cardAnswer: boolean = false;
   buttonInitial: boolean = true;
@@ -32,12 +14,7 @@ export class HomePage implements OnInit {
   answerText: string = '';
   counter: number = 0;
   counterQuestionsList: number = 0;
-
-  constructor() {
-    addIcons({ refreshCircle, refreshCircleSharp });
-  }
-
-  ngOnInit() {}
+  constructor() {}
 
   reset() {
     this.counter = 0;
@@ -109,16 +86,5 @@ export class HomePage implements OnInit {
           break;
       }
     }
-  }
-
-  // old code
-  toggleCard() {
-    this.showCard = !this.showCard;
-    this.showButtonStarted = !this.showButtonStarted;
-  }
-
-  resetBtnCard() {
-    this.showCard = false;
-    this.showButtonStarted = true;
   }
 }
